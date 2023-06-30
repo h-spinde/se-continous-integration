@@ -1,4 +1,4 @@
-import org.junit.Assert.*;
+import org.junit.Assert;
 import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
@@ -22,16 +22,16 @@ public class PrimeCheckTest {
   // --------------------------------------------------------------- //
   @Test
   public void testPrimes() {
-    assertTrue("this is a prime number!", PrimeCheck.isPrime(7));
-    assertTrue("this is a prime number!", PrimeCheck.isPrime(5179));
-    assertTrue("this is a prime number!", PrimeCheck.isPrime(3));
+    assertEquals("this is a prime number!", true, PrimeCheck.isPrime(7));
+    assertEquals("this is a prime number!", true, PrimeCheck.isPrime(5179));
+    assertEquals("this is a prime number!", true, PrimeCheck.isPrime(3));
   }
 
   // --------------------------------------------------------------- //
   @Test
   public void testNonPrimes() {
-    assertFalse("this is NOT a prime number!", PrimeCheck.isPrime(4));
-    assertFalse("this is NOT a prime number!", PrimeCheck.isPrime(55));
-    assertFalse("this is NOT a prime number!", PrimeCheck.isPrime(100000000));
+    assertEquals("this is NOT a prime number!", false, PrimeCheck.isPrime(4));
+    assertEquals("this is NOT a prime number!", false, PrimeCheck.isPrime(55));
+    assertEquals("this is NOT a prime number!", false, PrimeCheck.isPrime(100000000));
   }
 }
